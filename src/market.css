@@ -1,0 +1,47 @@
+.marketplace {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+}
+.marketplace {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjusts spacing around items */
+  gap: 20px; /* Adjust the space between items */
+  padding: 20px; /* Padding around the grid */
+}
+
+.product {
+  flex: 1 1 calc(33.333% - 40px); /* Ensures 3 items per row, accounting for gap */
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  /* Optional: Set a min-width to prevent items from becoming too narrow */
+  min-width: 250px; /* Adjust based on your design */
+}
+
+@media (max-width: 768px) {
+  .product {
+    flex: 1 1 calc(50% - 40px); /* Two items per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product {
+    flex: 1 1 100%; /* One item per row on small screens */
+  }
+}
+
